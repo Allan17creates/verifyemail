@@ -32,10 +32,6 @@ export async function POST(req: NextRequest) {
     success_url: `${appUrl}/dashboard?success=true`,
     cancel_url: `${appUrl}/pricing`,
     customer_email: userData.user.email,
-    // Lets Stripe show whichever methods are enabled in the Dashboard
-    // (cards, Link, PayPal, Apple/Google Pay, Alipay, iDEAL, etc.) based
-    // on the buyer's currency and location, instead of hardcoding a list.
-    automatic_payment_methods: { enabled: true },
     metadata: {
       userId: userData.user.id,
       pack: pack.name,
