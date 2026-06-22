@@ -1,0 +1,63 @@
+---
+title: "Fake Email vs. Real Email: How to Tell the Difference"
+description: "How to spot fake, throwaway, and bot-generated email addresses before they end up in your database."
+date: "2026-01-20"
+readTime: "5 min read"
+---
+
+Not every email address that lands in your signup form belongs to a real person who wants to hear from you. Some are typos. Some are throwaway addresses used to get past a gate. Some are entirely fabricated by bots. Telling these apart matters more than most teams realize.
+
+## What "fake" actually means
+
+"Fake email" covers a few distinct categories, and they require different handling:
+
+- **Typos**: a real person made a mistake, `jon@gmial.com` instead of `gmail.com`.
+- **Disposable addresses**: temporary mailboxes from services like Mailinator or Guerrilla Mail, created to receive one message and then disappear.
+- **Bot-generated addresses**: random strings created by automated signup scripts, often used for spam or fraud.
+- **Honeypots and spam traps**: addresses set up specifically to catch senders who aren't verifying their lists.
+
+A real email address, by contrast, belongs to an active mailbox that a person actually checks.
+
+## Signs an address might be fake
+
+### The domain is a known disposable provider
+
+There are hundreds of disposable email domains in active use. These are designed to be created instantly and abandoned just as fast. If an address comes from one of these domains, treat it as low-value at best, even if the mailbox technically exists at the moment you check it.
+
+### The address has no history
+
+A freshly created disposable mailbox won't show up anywhere else, no associated accounts, no prior engagement. This is harder to check directly, but it's part of why disposable addresses are a different risk category than ordinary typos.
+
+### The format looks automated
+
+Random strings of letters and numbers before the `@` sign, `x7f9k2m@domain.com`, are a common pattern for bot-generated signups, especially at scale.
+
+### It fails mailbox-level verification
+
+This is the most reliable signal. Real verification checks whether the specific mailbox exists on the receiving server, separate from whether the domain itself is valid. A fake address might have a real, well-known domain (a free Gmail account, for instance) while the specific mailbox was never created.
+
+## Why this distinction matters
+
+Treating all "fake" addresses the same way is a mistake:
+
+- **Typos** are often recoverable. A "did you mean" suggestion can recover a real signup that would otherwise be lost.
+- **Disposable addresses** indicate a user who doesn't want to be tracked long-term, useful to know, but not worth investing marketing spend on.
+- **Bot-generated addresses** are a sign of abuse on your signup form and may warrant additional protection, like CAPTCHA or rate limiting.
+
+## How to catch fake addresses before they cost you anything
+
+The most effective approach is verification at the point of collection, checking an address the moment someone submits it, before it's stored anywhere. A check that flags disposable domains, validates mailbox existence, and catches obvious typos stops most fake addresses from ever entering your system.
+
+[verifyemail.app](/) does exactly this: paste an address in and get back a clear Valid, Invalid, or Risky result, along with a flag for disposable addresses and a typo suggestion when one is available. For existing lists, the same checks run in bulk against a CSV upload.
+
+## What to do once you've found them
+
+- **Typos**: prompt the user with a suggested correction, or simply correct it before saving.
+- **Disposable addresses**: decide based on your use case, block them outright for high-value flows like paid signups, or just flag them for low-stakes ones like content downloads.
+- **Bot-generated and trap addresses**: remove them from your list entirely. Sending to these carries real reputation risk with no upside.
+
+## The takeaway
+
+Fake doesn't mean one thing. Knowing whether you're dealing with a typo, a disposable address, or a bot-generated string changes what you should do about it, and verification is what gives you that distinction in the first place.
+
+Verify an email address now →

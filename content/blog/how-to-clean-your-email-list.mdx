@@ -1,0 +1,70 @@
+---
+title: "How to Clean Your Email List"
+description: "A step-by-step process for cleaning up an old or unreliable email list before your next campaign."
+date: "2026-01-25"
+readTime: "7 min read"
+---
+
+If you haven't actively maintained your email list, it's dirtier than you think. Addresses decay over time, and an unmaintained list can lose a meaningful percentage of valid contacts every year. Here's a practical process for cleaning it up.
+
+## Why list cleaning matters
+
+A dirty list doesn't just waste your sends, it actively hurts you. High bounce rates damage your sender reputation, hitting deliverability for every email you send afterward, including to subscribers who are perfectly engaged. Spam traps hidden in an old list can get your sending domain blocklisted entirely.
+
+Cleaning your list isn't a one-time chore. It's ongoing maintenance, the same way you'd maintain any other piece of business infrastructure.
+
+## Step 1: Remove obvious duplicates and formatting errors
+
+Start with the easy wins. Export your list and check for:
+
+- Duplicate entries (same address, different capitalization counts as a duplicate)
+- Addresses with obvious formatting issues, missing `@`, trailing spaces, stray punctuation
+- Empty rows or placeholder values like "test@test.com"
+
+This is mechanical cleanup, not verification, but it's worth doing first so you're not running checks on garbage data.
+
+## Step 2: Run mailbox-level verification on what's left
+
+This is the step that actually matters. Syntax-level checks won't tell you whether an address is real, you need to verify that the mailbox exists and is accepting mail.
+
+Upload your cleaned list as a CSV to a bulk verification tool. A good tool will check, for every address:
+
+- Whether the domain has valid MX records
+- Whether the specific mailbox exists
+- Whether the address is disposable
+- An overall risk level: low, medium, or high
+
+[verifyemail.app](/) runs exactly this check. Drop in your CSV, and you'll get back a report classifying every address as Valid, Invalid, or Risky, with a plain-language reason for each one.
+
+## Step 3: Sort your results into action groups
+
+Once you have a verification report, don't treat every flagged address the same way:
+
+- **Invalid addresses**: remove these. They're confirmed not to exist or unable to receive mail.
+- **Risky addresses**: review before removing. Some risky addresses, like role-based ones (`info@`, `support@`), might still be worth keeping for specific outreach, even if they're not great for newsletters.
+- **Disposable addresses**: usually safe to remove from long-term lists, since these mailboxes are designed to be temporary.
+- **Valid addresses**: keep, and consider this your real, sendable list going forward.
+
+## Step 4: Segment by engagement, not just validity
+
+A clean list isn't only about removing dead addresses, it's also about removing addresses that are technically valid but never engage. Subscribers who haven't opened anything in a year are dragging down your engagement metrics even though they wouldn't show up in a bounce report.
+
+Consider a re-engagement campaign for inactive-but-valid subscribers before removing them outright. Some will come back; the rest you can confidently drop.
+
+## Step 5: Fix the source, not just the symptom
+
+If you clean your list but keep collecting addresses the same way, you'll be back here in six months. Add verification at the point of collection, on your signup form, checkout flow, or lead capture form, so bad addresses stop entering your database in the first place.
+
+## How often should you clean?
+
+There's no universal answer, but a reasonable cadence is:
+
+- **Before every major campaign**, especially if the list hasn't been used recently
+- **Quarterly**, as routine maintenance for actively used lists
+- **Immediately**, if you've just imported a list from a CRM migration, event signup, or purchased source
+
+## The takeaway
+
+List cleaning isn't glamorous, but it's one of the highest-leverage things you can do for your email program. A smaller, verified list will consistently outperform a larger, dirty one, in deliverability, in engagement, and in actual results.
+
+Verify an email address now →

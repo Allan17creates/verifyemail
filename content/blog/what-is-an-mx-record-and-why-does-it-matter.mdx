@@ -1,0 +1,50 @@
+---
+title: "What Is an MX Record and Why Does It Matter?"
+description: "A plain-language explanation of MX records, how they work, and why they're central to email verification."
+date: "2026-02-14"
+readTime: "5 min read"
+---
+
+If you've ever looked at an email verification report, you've probably seen "MX record" listed as a check. It's one of the most fundamental things to look at when verifying an email address, but most explanations of it get buried in technical jargon. Here's the plain version.
+
+## What MX records actually are
+
+MX stands for "Mail Exchange." It's a type of DNS (Domain Name System) record that tells the internet which mail servers are responsible for receiving email on behalf of a domain.
+
+When you send an email to `someone@company.com`, your mail server doesn't just guess where to deliver it. It looks up the MX record for `company.com`, which points to the specific server (or servers) configured to accept mail for that domain. Without an MX record, there's no destination for the email to go to, even if the domain itself exists and has a working website.
+
+## Why a domain can have a website but no email
+
+It's entirely possible for a domain to resolve to a website but have no MX record at all. This happens with domains that are registered but never set up for email, placeholder domains, or domains that were once used for email but have since been abandoned.
+
+This is exactly why MX record checks matter for verification: a domain "existing" in the sense of having a working website tells you nothing about whether it can receive mail. You need to check the MX record specifically.
+
+## How MX records relate to email verification
+
+When a verification tool checks an email address, one of the first steps is looking up the MX record for the domain. If there's no MX record, the address can be marked invalid immediately, there's no mail server to deliver to, regardless of what the mailbox name is.
+
+If an MX record does exist, verification moves to the next step: connecting to that mail server and checking whether the specific mailbox is configured to accept mail. This is the layer beyond MX records, domain-level validity versus mailbox-level validity.
+
+## A real example
+
+Say you're checking `info@example-startup.io`. The verification process looks something like this:
+
+1. **MX record check**: Does `example-startup.io` have an MX record? If not, the address is invalid, no further checking needed.
+2. **Mailbox check**: If an MX record exists, does the mailbox `info` actually exist at that domain?
+3. **Risk check**: Even if the mailbox exists, is it disposable, a known spam trap, or otherwise risky to send to?
+
+Each of these is a separate signal, and a thorough check reports all three rather than collapsing them into a single pass/fail.
+
+## Why MX-only checks aren't enough
+
+Some lighter-weight "verification" tools stop at the MX record check and call it done. This is faster and cheaper to run, but it has an important limitation: it tells you the domain *could* receive mail, not that the specific address *does*.
+
+A domain with a valid MX record can still have plenty of addresses that don't exist, `randomguess@gmail.com` will pass an MX check every time, since Gmail obviously has valid mail servers, but that doesn't mean the mailbox is real.
+
+This is why [verifyemail.app](/) checks both layers: the MX record for the domain, and the mailbox itself, before returning a result. The MX check is necessary, but it's a starting point, not the whole answer.
+
+## The takeaway
+
+An MX record is the basic plumbing that makes email delivery possible for a domain. Checking it is a useful first filter, but real verification has to go one layer deeper, into the mailbox itself, to actually tell you whether an address is worth sending to.
+
+Verify an email address now →

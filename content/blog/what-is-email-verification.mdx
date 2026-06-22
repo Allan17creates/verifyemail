@@ -1,0 +1,68 @@
+---
+title: "What Is Email Verification?"
+description: "An introduction to email verification: what it checks, how it works, and why it matters."
+date: "2026-01-08"
+readTime: "5 min read"
+---
+
+Email verification is the process of confirming that an email address is real, properly formatted, and able to receive mail, before you actually send anything to it.
+
+It sounds simple, but it's one of the most overlooked steps in running an email program. Most teams collect addresses through signup forms, lead lists, or CRM imports, and assume that if an address looks right, it works. It often doesn't.
+
+## What email verification actually checks
+
+A thorough verification process looks at several layers:
+
+### Syntax
+
+Does the address follow the basic rules of an email format? This is the simplest check and the least useful on its own, it catches typos but tells you nothing about whether the address is real.
+
+### Domain validity
+
+Does the domain exist, and is it configured to receive mail? This means checking for MX (Mail Exchange) records, which tell the internet which servers handle mail for that domain.
+
+### Mailbox existence
+
+This is the core of real verification: does the specific mailbox at that domain actually exist? A domain can be perfectly valid while the individual address in front of the `@` sign is made up, deleted, or never created.
+
+### Risk and reputation signals
+
+Beyond existence, verification tools flag risk factors: disposable or temporary email services, known spam traps, role-based addresses, and domains with poor sending reputations.
+
+## Why it matters
+
+Sending to unverified lists has real costs:
+
+- **Bounce rates climb.** Every email that bounces signals to mailbox providers that you might be a careless sender, or worse, a spammer.
+- **Sender reputation drops.** Internet service providers track how clean your sending is. A reputation hit can land your legitimate emails in spam folders, even for real subscribers.
+- **You waste money.** If you're paying per email sent, or basing decisions on "lead" counts that include dead addresses, you're spending against numbers that don't reflect reality.
+- **Spam traps cause real damage.** Sending to a spam trap address can get your domain blocklisted, which affects deliverability across your entire list, not just that one bad address.
+
+## When to verify
+
+The two most common moments to verify are:
+
+1. **At the point of collection**, verifying an address the moment someone submits a form, before it ever enters your database.
+2. **Before a send**, running your existing list through a bulk verification pass before a campaign, especially if the list is old, purchased, or hasn't been used in a while.
+
+Both matter. Point-of-collection verification keeps bad data out. Pre-send verification cleans up what's already there.
+
+## How verification tools work in practice
+
+Most verification services work in one of two ways: a single check for one address at a time, or a bulk check where you upload a list and get a report back.
+
+For a single check, you type in an email address and get a result in seconds, useful when you're vetting a new contact or double-checking a sign-up. For bulk checks, you upload a CSV file, the service processes it in the background, and you download a report showing the status of each address.
+
+[verifyemail.app](/) supports both. You can paste a single address into the homepage for an instant result, or, once you have an account, upload a full list and download a complete report with mailbox-level results for every row.
+
+## The difference between a real check and a guess
+
+Not every "verification" tool actually verifies the mailbox. Some only check domain-level MX records and call that a pass. That tells you the domain *could* receive mail, not that the specific address does.
+
+Real verification connects to the mail server and checks the individual mailbox, without sending an actual email to it. That distinction is the entire point: it's the difference between a confident result and an educated guess.
+
+## The takeaway
+
+Email verification isn't a nice-to-have for serious senders, it's table stakes. If you're not checking mailbox existence specifically, you're not really verifying anything.
+
+Verify an email address now →

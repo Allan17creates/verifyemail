@@ -1,0 +1,69 @@
+---
+title: "How to Check If an Email Address Is Real"
+description: "A practical guide to verifying whether an email address actually exists before you send to it."
+date: "2026-01-12"
+readTime: "6 min read"
+---
+
+You've got an email address, maybe from a signup form, a business card, or a list you bought. Before you send anything to it, you need to know one thing: is it real?
+
+A "real" email address isn't just one that looks correctly formatted. It's one that exists, belongs to an active mailbox, and can actually receive mail. Getting this wrong costs you money in bounced sends, hurts your sender reputation, and wastes time chasing leads that were never there.
+
+## Why syntax checks aren't enough
+
+The most basic way to "check" an email is to look at its format: does it have an `@` symbol, a domain, and no obvious typos? This catches some mistakes, but it tells you almost nothing about whether the mailbox is real.
+
+`notarealperson@gmail.com` passes every syntax check. It looks perfectly valid. It might still bounce the moment you send to it, because no mailbox exists at that address.
+
+## The three layers of a real check
+
+Proper email verification checks three separate things:
+
+### 1. Domain and MX records
+
+First, does the domain exist, and does it have mail servers (MX records) configured to receive email? A domain with no MX record can't receive mail at all, regardless of what's in front of the `@` sign.
+
+### 2. Mailbox existence
+
+This is the layer most tools skip. A real verification service connects to the receiving mail server and checks whether the specific mailbox exists, without actually sending an email. This is what separates "the domain is fine" from "this specific address is real."
+
+### 3. Risk signals
+
+Even a mailbox that technically exists can be risky to send to. Disposable addresses, spam traps, and role-based addresses (like `info@` or `support@`) all carry different levels of risk. A good check tells you not just valid or invalid, but how risky the address is to use.
+
+## How to actually do this
+
+You have a few options, depending on scale:
+
+- **One-off checks**: Paste the address into a verification tool and get a result in seconds. This is the fastest path if you're checking a handful of addresses.
+- **Bulk checks**: If you have a list, from a CRM export, a webinar signup sheet, or an old database, you'll want a tool that accepts a CSV and returns a report for every row.
+- **API integration**: If you're verifying emails as part of a signup flow, you can call a verification API directly from your form before allowing submission.
+
+[verifyemail.app](/) handles all three. Paste a single address into the homepage and you'll get mailbox-level verification in seconds, with a clear Valid, Invalid, or Risky label and a plain-language reason, no account required for your first checks.
+
+## What a good result actually tells you
+
+A useful verification result should give you more than a yes/no. Look for:
+
+- **Status**: Valid, Invalid, or Risky
+- **Reason**: a plain explanation, like "Mailbox does not exist" or "Disposable email detected"
+- **Domain details**: whether MX records were found
+- **Risk level**: low, medium, or high
+
+If a tool only gives you a green checkmark with no explanation, you're trusting a black box. You want to know *why* an address was flagged, especially when you're deciding whether to remove it from a list entirely or just send to it more carefully.
+
+## A quick example
+
+Say you're checking `j.smith@acme-corp.com`. A real check will tell you:
+
+- The domain `acme-corp.com` has valid MX records
+- The mailbox `j.smith` exists and is accepting mail
+- The address is not disposable and carries low risk
+
+Compare that to `temp123@mailinator.com`, where the domain is real and has MX records, but the address is a known disposable mailbox, risky to send to even though it technically "exists."
+
+## The bottom line
+
+Checking if an email is real means going past the format and confirming the mailbox itself. Anything less is a guess dressed up as a check.
+
+Verify an email address now →
