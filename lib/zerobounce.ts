@@ -92,7 +92,7 @@ function transform(data: ZeroBounceResponse): VerificationResult {
 }
 
 export async function verifyEmail(email: string): Promise<VerificationResult> {
-  const apiKey = process.env.ZEROBOUNCE_API_KEY;
+  const apiKey = process.env.ZEROBOUNCE_API_KEY?.trim();
   if (!apiKey) {
     throw new Error("ZEROBOUNCE_API_KEY is not configured");
   }
@@ -108,6 +108,11 @@ export async function verifyEmail(email: string): Promise<VerificationResult> {
     throw new Error(`ZeroBounce request failed with status ${res.status}`);
   }
 
-  const data = (await res.json()) as ZeroBounceResponse;
+  const data = (await res.json()) as ZeroBounceResponse & { error?: string };
+
+  if (data.error) {
+    throw new Error(`ZeroBounce: ${data.error}`);
+  }
+
   return transform(data);
 }
