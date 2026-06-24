@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   try {
     const post = getPostBySlug(params.slug);
-    return { title: `${post.title}, verifyemail.app`, description: post.description };
+    return { title: `${post.title}, ismyemailworking.app`, description: post.description };
   } catch {
     return {};
   }
@@ -30,7 +30,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <>
       <Nav />
       <main className="mx-auto max-w-content px-6 py-20">
-        <p className="text-xs text-subtext">{post!.readTime} · The verifyemail.app team</p>
+        <p className="text-xs text-subtext">{post!.readTime} · The ismyemailworking.app team</p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-text">{post!.title}</h1>
 
         <article className="prose-article mt-10 text-[18px] leading-[1.75]">

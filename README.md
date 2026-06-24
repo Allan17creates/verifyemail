@@ -1,4 +1,4 @@
-# verifyemail.app
+# ismyemailworking.app
 
 Full mailbox email verification, built with Next.js, Supabase, Stripe, and ZeroBounce.
 
@@ -30,7 +30,7 @@ ZEROBOUNCE_API_KEY=
 STRIPE_SECRET_KEY=
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_APP_URL=https://verifyemail.app
+NEXT_PUBLIC_APP_URL=https://ismyemailworking.app
 
 # One Stripe Price ID per credit pack
 STRIPE_PRICE_STARTER=
@@ -58,7 +58,7 @@ on a fresh project before connecting the app.
    `STRIPE_WEBHOOK_SECRET`.
 4. **Push to GitHub.**
 5. **Vercel**, connect the repo, add all env vars in the Vercel dashboard.
-6. **Domain**, point `verifyemail.app` DNS at Vercel.
+6. **Domain**, point `ismyemailworking.app` DNS at Vercel.
 7. **Supabase Auth**, add your production domain to the allowed redirect URLs
    (Authentication → URL Configuration) so magic links resolve correctly.
 8. **Test end-to-end**: run a free check → log in → buy a credit pack → upload a

@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/Card";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata = {
-  title: "Blog, verifyemail.app",
+  title: "Blog, ismyemailworking.app",
   description: "Guides on email verification, deliverability, and list hygiene.",
 };
 

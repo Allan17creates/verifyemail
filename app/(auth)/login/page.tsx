@@ -40,7 +40,7 @@ export default function LoginPage() {
     <main className="flex min-h-screen items-center justify-center px-6">
       <Card className="w-full max-w-sm">
         <Link href="/" className="text-sm font-bold text-text">
-          verifyemail<span className="text-accent">.app</span>
+          ismyemailworking<span className="text-accent">.app</span>
         </Link>
 
         <h1 className="mt-6 text-xl font-bold text-text">Log in</h1>

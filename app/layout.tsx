@@ -8,8 +8,8 @@ import "@fontsource/jetbrains-mono/500.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://verifyemail.app"),
-  title: "verifyemail.app, Know before you send",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://ismyemailworking.app"),
+  title: "ismyemailworking.app, Know before you send",
   description:
     "Verify any email address in seconds. Full mailbox verification, not just domain checks.",
 };

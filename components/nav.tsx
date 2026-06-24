@@ -5,7 +5,7 @@ export function Nav() {
     <header className="border-b border-border">
       <div className="mx-auto flex max-w-dashboard items-center justify-between px-6 py-4">
         <Link href="/" className="text-sm font-bold tracking-tight text-text">
-          verifyemail<span className="text-accent">.app</span>
+          ismyemailworking<span className="text-accent">.app</span>
         </Link>
         <nav className="flex items-center gap-6 text-sm text-subtext">
           <Link href="/pricing" className="hover:text-text">

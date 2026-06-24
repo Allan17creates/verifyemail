@@ -22,7 +22,7 @@ export function Footer() {
           </Link>
         </nav>
         <p className="text-xs text-subtext">
-          verifyemail.app, full mailbox verification, built for people who
+          ismyemailworking.app, full mailbox verification, built for people who
           care about deliverability.
         </p>
       </div>

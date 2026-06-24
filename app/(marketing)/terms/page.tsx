@@ -1,7 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 
-export const metadata = { title: "Terms of Service, verifyemail.app" };
+export const metadata = { title: "Terms of Service, ismyemailworking.app" };
 
 export default function TermsPage() {
   return (
@@ -14,7 +14,7 @@ export default function TermsPage() {
         <div className="prose-article mt-10">
           <h2>1. What we do</h2>
           <p>
-            verifyemail.app provides email address verification services, including
+            ismyemailworking.app provides email address verification services, including
             single-address checks and bulk verification of uploaded lists. We check
             whether an email address is likely to be real, deliverable, and low-risk
             to send to.
@@ -47,7 +47,7 @@ export default function TermsPage() {
 
           <h2>5. Acceptable use</h2>
           <p>
-            You may not use verifyemail.app to verify lists for spam campaigns, to
+            You may not use ismyemailworking.app to verify lists for spam campaigns, to
             harass individuals, or to circumvent another service's rate limits or
             terms of service. We reserve the right to suspend accounts that we
             reasonably believe are violating this.
@@ -62,7 +62,7 @@ export default function TermsPage() {
 
           <h2>7. Limitation of liability</h2>
           <p>
-            verifyemail.app is provided as-is. We are not liable for indirect damages
+            ismyemailworking.app is provided as-is. We are not liable for indirect damages
             arising from bounced emails, lost business, or decisions made based on
             verification results.
           </p>
@@ -74,7 +74,7 @@ export default function TermsPage() {
           </p>
 
           <h2>9. Contact</h2>
-          <p>Questions about these terms can be sent to support@verifyemail.app.</p>
+          <p>Questions about these terms can be sent to support@ismyemailworking.app.</p>
         </div>
       </main>
       <Footer />

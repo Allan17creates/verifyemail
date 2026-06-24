@@ -41,7 +41,7 @@ Some lighter-weight "verification" tools stop at the MX record check and call it
 
 A domain with a valid MX record can still have plenty of addresses that don't exist, `randomguess@gmail.com` will pass an MX check every time, since Gmail obviously has valid mail servers, but that doesn't mean the mailbox is real.
 
-This is why [verifyemail.app](/) checks both layers: the MX record for the domain, and the mailbox itself, before returning a result. The MX check is necessary, but it's a starting point, not the whole answer.
+This is why [ismyemailworking.app](/) checks both layers: the MX record for the domain, and the mailbox itself, before returning a result. The MX check is necessary, but it's a starting point, not the whole answer.
 
 ## The takeaway
 

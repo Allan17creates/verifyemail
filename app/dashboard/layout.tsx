@@ -11,7 +11,7 @@ export default function DashboardLayout({
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-dashboard items-center justify-between px-6 py-4">
           <Link href="/" className="text-sm font-bold text-text">
-            verifyemail<span className="text-accent">.app</span>
+            ismyemailworking<span className="text-accent">.app</span>
           </Link>
           <Link href="/dashboard/account" className="text-sm text-subtext hover:text-text">
             Account

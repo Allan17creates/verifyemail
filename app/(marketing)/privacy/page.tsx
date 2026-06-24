@@ -1,7 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 
-export const metadata = { title: "Privacy Policy, verifyemail.app" };
+export const metadata = { title: "Privacy Policy, ismyemailworking.app" };
 
 export default function PrivacyPage() {
   return (
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
           </p>
 
           <h2>9. Contact</h2>
-          <p>Questions about this policy can be sent to privacy@verifyemail.app.</p>
+          <p>Questions about this policy can be sent to privacy@ismyemailworking.app.</p>
         </div>
       </main>
       <Footer />
